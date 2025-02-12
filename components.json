@@ -1,0 +1,8 @@
+{
+    "components": [],
+    "imports": [],
+    "tailwind": {
+      "config": "tailwind.config.js",
+      "css": "src/index.css"
+    }
+  }
