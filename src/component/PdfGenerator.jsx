@@ -141,8 +141,8 @@ const PdfGenerator = () => {
 
           <tr>
             <td>Conveyance</td>
-            <td>1068.75</td>
-            <td></td>
+            <td>{employeeDetails.basicPay * 0.1973}</td>
+            <td>{employeeDetails.basicPay * 0.197 * 12}</td>
           </tr>
 
           <tr>
@@ -155,15 +155,23 @@ const PdfGenerator = () => {
             <th colSpan={2}>Refer to Annexure 1</th>
           </tr>
 
+          
+
           <tr>
             <td>Medical reimbursement</td>
             <th colSpan={2}>Refer to Annexure 1</th>
           </tr>
 
           <tr>
+            <td>HRA</td>
+            <td>{employeeDetails.basicPay * 0.1973}</td>
+            <td>{employeeDetails.basicPay * 0.197 * 12}</td>
+          </tr>
+
+          <tr>
             <td>Residual choice pay</td>
-            <td>5445.5</td>
-            <td>65,345</td>
+            <td>{employeeDetails.basicPay * 0.1973}</td>
+            <td>{employeeDetails.basicPay * 0.197 * 12}</td>
           </tr>
 
           <tr>
@@ -172,26 +180,28 @@ const PdfGenerator = () => {
 
           <tr>
             <td>PF- Employer Contribution</td>
-            <td>2106</td>
-            <td>2106</td>
+            <td>{employeeDetails.basicPay * 0.18}</td>
+            <td>{employeeDetails.basicPay * 0.18 * 12}</td>
           </tr>
 
           <tr>
             <td>Gratuity (4.81% of Basic)</td>
-            <td>844.15</td>
-            <td>844.15</td>
+            <td>{employeeDetails.basicPay * 0.048}</td>
+            <td>{employeeDetails.basicPay * 0.048 * 12}</td>
           </tr>
+
+         
 
           <tr>
             <td>NPS</td>
-            <td>2106</td>
-            <td>2106</td>
+            <td>{employeeDetails.basicPay * 0.18}</td>
+            <td>{employeeDetails.basicPay * 0.18 * 12}</td>
           </tr>
 
           <tr>
             <th>TOTAL FIXED PAY (A)</th>
-            <td>35,100</td>
-            <td>35,100</td>
+            <td>{employeeDetails.salary}</td>
+            <td>{employeeDetails.salary * 12}</td>
           </tr>
 
           <br />

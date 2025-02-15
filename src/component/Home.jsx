@@ -13,6 +13,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Main/>
   },
+  
   {
     path: "/offer-letter",
     element: <Offer/>
