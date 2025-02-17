@@ -45,7 +45,7 @@ const Offer = () => {
             </button>
 
             <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
-            onClick={()=> navigate("/area-sales-manager")}
+            onClick={()=> navigate("/offer-letter/area-sales-manager")}
             >
               Area Sales manager
             </button>

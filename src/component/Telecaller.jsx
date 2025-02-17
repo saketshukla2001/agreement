@@ -104,8 +104,8 @@ export const Telecaller = () => {
         date is {employeeDetails.dateOfCommencement}, you shall be eligible for the given policy. <br />
 
         <br />
-        Clause: As per the company you have to install 7 sales app. As per the 7 sales app you have to punch your attendance
-        (Market Time- 9:30 am) and if you punch above 9:45 am then automatically your attendance will be counted half
+        Clause: As per the company you have to Tankha app you have to punch your attendance
+        (Office Time- 9:30 am) and if you punch above 9:45 am then automatically your attendance will be counted half
         and upload selfie daily. In this case your DA will be Rs . At the end of the month, we will send you your salary slip.
         Clause: Target given by your current boss. You have to achieve 70% of your target of the month. And if you achieve
         your 100% target then you will receive incentives from company, it may be money or goods. <br />
@@ -143,8 +143,8 @@ export const Telecaller = () => {
 
           <tr>
             <td>Conveyance</td>
-            <td>1068.75</td>
-            <td></td>
+            <td>{employeeDetails.hra}</td>
+            <td>{employeeDetails.hra * 12}</td>
           </tr>
 
           <tr>
@@ -163,9 +163,15 @@ export const Telecaller = () => {
           </tr>
 
           <tr>
+            <td>HRA</td>
+            <td>{employeeDetails.hra}</td>
+            <td>{employeeDetails.hra * 12}</td>
+          </tr>
+
+          <tr>
             <td>Residual choice pay</td>
-            <td>5445.5</td>
-            <td>65,345</td>
+            <td>{employeeDetails.hra}</td>
+            <td>{employeeDetails.hra * 12}</td>
           </tr>
 
           <tr>
@@ -174,26 +180,32 @@ export const Telecaller = () => {
 
           <tr>
             <td>PF- Employer Contribution</td>
-            <td>2106</td>
-            <td>2106</td>
+            <td>{employeeDetails.basicPay * 0.12}</td>
+            <td>{employeeDetails.basicPay * 0.12 * 12}</td>
           </tr>
 
           <tr>
             <td>Gratuity (4.81% of Basic)</td>
+            <td>{employeeDetails.basicPay * 0.0481}</td>
             <td>844.15</td>
-            <td>844.15</td>
+          </tr>
+
+          <tr>
+            <td>ESI</td>
+            <td>{employeeDetails.salary * 0.0075}</td>
+            <td>{employeeDetails.salary * 0.0075 * 12}</td>
           </tr>
 
           <tr>
             <td>NPS</td>
-            <td>2106</td>
-            <td>2106</td>
+            <td>{employeeDetails.basicPay * 0.12}</td>
+            <td>{employeeDetails.basicPay * 0.12 * 12}</td>
           </tr>
 
           <tr>
             <th>TOTAL FIXED PAY (A)</th>
-            <td>35,100</td>
-            <td>35,100</td>
+            <td>{employeeDetails.salary}</td>
+            <td>{employeeDetails.salary * 12}</td>
           </tr>
 
           <br />

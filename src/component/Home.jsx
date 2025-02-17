@@ -7,6 +7,7 @@ import { Sub } from './Sub'
 import Distributor from './Distributor'
 import Offer from './Offer'
 import { Telecaller } from './Telecaller'
+import Asm from './Asm'
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/offer-letter/area-sales-manager",
-    element: <PdfGenerator/>
+    element: <Asm/>
   },
   {
     path: "/offer-letter/telecaller",
