@@ -23,49 +23,66 @@ const router = createBrowserRouter([
     path: "/agreement",
     element: <Sub/>
   },
+
   {
     path: "/super-stockist",
     element: <Aggreement/>
   },
+
   {
     path: "/distribution",
     element: <Distributor/>
   },
+
   {
     path: "/offer-letter/area-sales-manager",
     element: <Asm/>
   },
+
+  {
+    path: "/offer-letter/sales-officer",
+    element: <PdfGenerator/>
+  },
+
+
   {
     path: "/offer-letter/telecaller",
     element: <Telecaller/>
   },
+
   {
     path: "/offer-letter/graphic-design",
-    element: <PdfGenerator/>
+    element: <Telecaller/>
   },
+
   {
     path: "/offer-letter/hr",
-    element: <PdfGenerator/>
+    element: <Telecaller/>
   },
+
   {
     path: "/offer-letter/admin",
-    element: <PdfGenerator/>
+    element: <Telecaller/>
   },
+
   {
     path: "/offer-letter/mis",
-    element: <PdfGenerator/>
+    element: <Telecaller/>
   },
+
   {
     path: "/offer-letter/accountant",
-    element: <PdfGenerator/>
+    element: <Telecaller/>
   },
+
   {
     path: "/offer-letter/godown-incharge",
-    element: <PdfGenerator/>
+    element: <Telecaller/>
   },
+
   {
     path: "/offer-letter/suppier",
-    element: <PdfGenerator/>
+    element: <Telecaller/>
   }
 
 ])

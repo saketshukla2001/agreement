@@ -23,7 +23,7 @@ const Offer = () => {
             <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
             onClick={()=> navigate("/offer-letter/graphic-design")}
             >
-              Graphic design
+              Graphic designer
             </button>
 
             <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
@@ -51,7 +51,7 @@ const Offer = () => {
             </button>
 
             <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
-            onClick={()=> navigate("/offer-letter/area-sales-manager")}
+            onClick={()=> navigate("/offer-letter/sales-officer")}
             >
               Sales officer
             </button>

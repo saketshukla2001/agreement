@@ -5,8 +5,7 @@ import './css/style.css';
 import myImage from "../assets/logo.png"
 import headImg from "../assets/Picture1.png"
 
-const Asm = () => {
-
+const Tele = () => {
 
     const [images, setImages] = useState([]);
 
@@ -28,6 +27,7 @@ const Asm = () => {
         targetPercentage: "",
         imageUpload: ""
     });
+
 
 
     const handleInputChange = (e) => {
@@ -80,8 +80,8 @@ const Asm = () => {
                 Your Date of Appointment will be {employeeDetails.dateOfCommencement}. <br />
                 <br />
                 Position and Reporting Structure: <br />
-                You will be performing therole of ASM and will be assigned a reporting NSM/GM
-                and control all sales staff repotting section leave and achieve target once you join. The company hasthe sole discretion
+                You will be performing the role of {employeeDetails.designation} and will be assigned a reporting {employeeDetails.reportingBoss}
+                .  and control all {employeeDetails.designation} repotting section leave and achieve target once you join. The company hasthe sole discretion
                 to change your position, reporting line and responsibilities as required by business needs <br />
 
                 <br />
@@ -100,11 +100,11 @@ const Asm = () => {
                 <br />
                 Annual Appraisal: <br />
                 Your appraisal shall be subject to the Performance Management policyas designed and applicable to Company. If your joining
-                date is 21/Jan/2025, you shall be eligible for the given policy. <br />
+                date is {employeeDetails.dateOfCommencement}, you shall be eligible for the given policy. <br />
 
                 <br />
-                Clause: As per the company you have to install 7 sales app. As per the 7 sales app you have to punch your attendance
-                (Market Time- 9:30 am) and if you punch above 9:45 am then automatically your attendance will be counted half
+                Clause: As per the company you have to Tankha app you have to punch your attendance
+                (Office Time- 9:30 am) and if you punch above 9:45 am then automatically your attendance will be counted half
                 and upload selfie daily. In this case your DA will be Rs . At the end of the month, we will send you your salary slip.
                 Clause: Target given by your current boss. You have to achieve 70% of your target of the month. And if you achieve
                 your 100% target then you will receive incentives from company, it may be money or goods. <br />
@@ -141,9 +141,9 @@ const Asm = () => {
                     </tr>
 
                     <tr>
-                        <td>DA & TA</td>
-                        <td>{employeeDetails.travelAllowance}</td>
-                        <td>{employeeDetails.travelAllowance * 12}</td>
+                        <td>Conveyance</td>
+                        <td>{employeeDetails.hra}</td>
+                        <td>{employeeDetails.hra * 12}</td>
                     </tr>
 
                     <tr>
@@ -155,8 +155,6 @@ const Asm = () => {
                         <td>Leave travel allowance</td>
                         <th colSpan={2}>Refer to Annexure 1</th>
                     </tr>
-
-
 
                     <tr>
                         <td>Medical reimbursement</td>
@@ -194,10 +192,8 @@ const Asm = () => {
                     <tr>
                         <td>ESI</td>
                         <td>{employeeDetails.salary * 0.0075}</td>
-                        <td>{employeeDetails.salary * 0.048 * 12}</td>
+                        <td>{employeeDetails.salary * 0.0075 * 12}</td>
                     </tr>
-
-
 
                     <tr>
                         <td>NPS</td>
@@ -207,7 +203,7 @@ const Asm = () => {
 
                     <tr>
                         <th>TOTAL FIXED PAY (A)</th>
-                        <td>{Number(employeeDetails.salary) + Number(employeeDetails.travelAllowance)}</td>
+                        <td>{employeeDetails.salary}</td>
                         <td>{employeeDetails.salary * 12}</td>
                     </tr>
 
@@ -225,6 +221,72 @@ const Asm = () => {
 
 
                 </table>
+
+
+                <div style={{ fontFamily: "serif", fontSize: "30px", textAlign: "center" }}>
+                    Annexure 1
+
+                </div>
+
+
+                <table style={{ borderCollapse: "collapse", margin: "20px", width: "80%", fontFamily: "serif" }}>
+
+
+                    <tr>
+                        <th>Level</th>
+                        <th>Mode/class of travel*</th>
+                        <th>Hotel Eligibility</th>
+                        <th>Out of pocket expense per day</th>
+                        <th>Local conveyance</th>
+                        <th>Hotel/ Guest House</th>
+                        <th>Own Arrangement</th>
+                    </tr>
+
+                    <tr>
+                        <td>D2 - E2</td>
+                        <td>‘Y’ Class by Air/ 1 AC By Train</td>
+                        <td>At actuals</td>
+                        <td>INR 300</td>
+                        <td>Taxi- AC</td>
+                        <td>Atactuals</td>
+                        <td>INR 1750</td>
+                    </tr>
+
+                    <tr>
+                        <td>C1 - D1</td>
+                        <td>‘Y’ Class by Air/ 1 AC By Train</td>
+                        <td>At actuals- Subject to max. of INR 4000 per day (inclusive of all taxes)</td>
+                        <td>INR 300</td>
+                        <td>Taxi- AC</td>
+                        <td>INR 1500</td>
+                        <td>INR 1500</td>
+                    </tr>
+
+                    <tr>
+                        <td>B1 - B3</td>
+                        <td>Y’ Class by Air/ 1 AC By Train</td>
+                        <td>At actuals Subject to max. of INR 3000 per day (inclusive of all taxes)</td>
+                        <td>INR 250</td>
+                        <td>Taxi- AC</td>
+                        <td>INR 1500</td>
+                        <td>INR 1500</td>
+                    </tr>
+
+                    <tr>
+                        <td>A1 - A3</td>
+                        <td>Y’ Class by Air/ 1 AC By Train</td>
+                        <td>At actuals Subject to max. of INR 3000 per day (inclusive of all taxes)</td>
+                        <td>INR 200</td>
+                        <td>Taxi Non AC/ Public Transport</td>
+                        <td>INR 1000</td>
+                        <td>INR 1000</td>
+                    </tr>
+
+                </table>
+
+                <div>Own Car/ company owned car can be opted to travel (applicable to A grade and above employees only)</div>
+
+                <div style={{ height: "5rem" }}></div>
 
                 <div style={{ fontFamily: "serif" }}>
                     <div style={{ fontSize: "30px" }}>Domestic Travel Policy</div>
@@ -255,8 +317,8 @@ const Asm = () => {
                         - You will be eligible for 12 days Annual Leave. <br />
                         - You will accrue 3 leaves per quarter. These 3 leaves will be credited to employee’s leave balance at the beginning of every
                         quarter in advance. <br />
-                        - An employee servingnotice cannot avail anyleaves during notice period. Leaves cannot be adjusted against notice period. At
-                        the end of everyleave year a maximum of 10 un-utilized leaves can be carried forward. Balance ALs will get lapsed. <br />
+                        - An employee serving notice cannot avail anyleaves during notice period. Leaves cannot be adjusted against notice period. <br />
+                        - At the end of everyleave year a maximum of 10 un-utilized leaves can be carried forward. Balance ALs will get lapsed. <br />
                         - Un-utilized ALs will be encased only at the time of Full and Final settlement Sick Leave
                         (SL) <br />
                         - You will be eligible for 3 days sick leaves every year. SL cannot be carried forward to the next year. SL cannot be encased. <br />
@@ -480,7 +542,6 @@ const Asm = () => {
     };
 
 
-
     return (
         <>
             <div>
@@ -653,9 +714,6 @@ const Asm = () => {
             </div>
         </>
     )
-
-
-
 }
 
-export default Asm
+export default Tele

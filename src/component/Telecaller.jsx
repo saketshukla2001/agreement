@@ -187,7 +187,7 @@ export const Telecaller = () => {
           <tr>
             <td>Gratuity (4.81% of Basic)</td>
             <td>{employeeDetails.basicPay * 0.0481}</td>
-            <td>844.15</td>
+            <td>{employeeDetails.basicPay * 0.0481 * 12}</td>
           </tr>
 
           <tr>
@@ -224,7 +224,7 @@ export const Telecaller = () => {
         </table>
 
 
-        <div style={{fontFamily: "serif", fontSize: "30px", textAlign: "center"}}>
+        <div style={{ fontFamily: "serif", fontSize: "30px", textAlign: "center" }}>
           Annexure 1
 
         </div>
@@ -287,7 +287,7 @@ export const Telecaller = () => {
 
         <div>Own Car/ company owned car can be opted to travel (applicable to A grade and above employees only)</div>
 
-        <div style={{height: "5rem"}}></div>
+        <div style={{ height: "5rem" }}></div>
 
         <div style={{ fontFamily: "serif" }}>
           <div style={{ fontSize: "30px" }}>Domestic Travel Policy</div>
@@ -302,7 +302,7 @@ export const Telecaller = () => {
           <div style={{ fontWeight: "bold" }} >Claims cannot be done for dates exceeding 60 days from date of travel.</div>
           <br />
 
-          SalaryRevision: <br />
+          Salary Revision: <br />
           Your salary will be reviewed on annual basis. Revision in salary will be affected every year as per policy of the company.
           Salary revisions are discretionary and will be subject to, and on basis of effective (Individual and company) performance and
           results. <br />
@@ -329,8 +329,9 @@ export const Telecaller = () => {
             - Return to work within 3 days from the commencement of such absence, and provide satisfactory explanation to management
             regarding such absence
           </ul>
-          <br />
-          <br />
+          
+          <div style={{height: "10rem"}}></div>
+
           <div>
             <div style={{ fontSize: "20px" }}>- Posting and Transfer:</div>
             Your services are liable to be transferred, at the sole discretion of management, in such other capacity as the company may
@@ -461,10 +462,11 @@ export const Telecaller = () => {
           <div>
             We welcome you to our organization and look forward to your contribution to the growth of the organization.
           </div>
-          <br />
+          
+          <div style={{height: "15rem"}}></div>
 
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', marginTop: '10px' }}> Documnets
+          <div style={{ display: 'flex', flexWrap: 'wrap', marginTop: '10px' }}> 
             {images.map((image, index) => (
               <div key={index} style={{ position: 'relative', margin: '5px' }}>
                 <img src={image.url} alt={image.name} style={{ maxWidth: '200px', maxHeight: '200px' }} />
