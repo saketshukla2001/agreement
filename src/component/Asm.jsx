@@ -103,7 +103,7 @@ const Asm = () => {
                 date is 21/Jan/2025, you shall be eligible for the given policy. <br />
 
                 <br />
-                Clause: As per the company you have to install 7 sales app. As per the 7 sales app you have to punch your attendance
+                Clause: As per the company you have to install Tankha app you have to punch your attendance
                 (Market Time- 9:30 am) and if you punch above 9:45 am then automatically your attendance will be counted half
                 and upload selfie daily. In this case your DA will be Rs . At the end of the month, we will send you your salary slip.
                 Clause: Target given by your current boss. You have to achieve 70% of your target of the month. And if you achieve
@@ -132,7 +132,7 @@ const Asm = () => {
 
                     <tr>
                         <td>Basic Pay</td>
-                        <td>{employeeDetails.basicPay}</td>
+                        <td>{employeeDetails.basicPay * 1}</td>
                         <td>{employeeDetails.basicPay * 12}</td>
                     </tr>
 
@@ -142,7 +142,7 @@ const Asm = () => {
 
                     <tr>
                         <td>DA & TA</td>
-                        <td>{employeeDetails.travelAllowance}</td>
+                        <td>{employeeDetails.travelAllowance * 1}</td>
                         <td>{employeeDetails.travelAllowance * 12}</td>
                     </tr>
 
@@ -194,7 +194,7 @@ const Asm = () => {
                     <tr>
                         <td>ESI</td>
                         <td>{employeeDetails.salary * 0.0075}</td>
-                        <td>{employeeDetails.salary * 0.048 * 12}</td>
+                        <td>{employeeDetails.salary * 0.0075 * 12}</td>
                     </tr>
 
 
@@ -215,13 +215,6 @@ const Asm = () => {
 
                     <br />
 
-                    <br />
-
-                    <br />
-
-                    <br />
-
-                    <br />
 
 
                 </table>
@@ -327,7 +320,7 @@ const Asm = () => {
                         mentioned, your employment may be terminated by the company with immediate effect.
                     </div>
                     <br />
-
+                    
                     <div>
                         Intellectual Property: <br />
                         If you conceive any new or advanced mention of improving designed/ process/ formulae/ system, etc. in relation to the
@@ -346,17 +339,9 @@ const Asm = () => {
                         with the company. The Company reserves the right of civil and criminal proceedings in case of violation of this clause
                     </div>
 
-                    <br />
+                    <div style={{height: "10rem"}}></div> 
 
                     <br />
-
-                    <br />
-
-                    <br />
-
-                    <br />
-
-
                     <div>
                         Non-Solicitation: <br />
                         During the Employment Period and for a period of six months after any termination of employment hereunder for any reason,

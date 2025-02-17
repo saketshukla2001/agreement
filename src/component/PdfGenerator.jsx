@@ -79,7 +79,7 @@ const PdfGenerator = () => {
         Your Date of Appointment will be {employeeDetails.dateOfCommencement}. <br />
         <br />
         Position and Reporting Structure: <br />
-        You will be performing therole of ASM and will be assigned a reporting NSM/GM
+        You will be performing therole of {employeeDetails.designation} and will be assigned a reporting {employeeDetails.reportingBoss}
         and control all sales staff repotting section leave and achieve target once you join. The company hasthe sole discretion
         to change your position, reporting line and responsibilities as required by business needs <br />
 
@@ -102,7 +102,7 @@ const PdfGenerator = () => {
         date is 21/Jan/2025, you shall be eligible for the given policy. <br />
 
         <br />
-        Clause: As per the company you have to install 7 sales app. As per the 7 sales app you have to punch your attendance
+        Clause: As per the company you have to install Tankha App you have to punch your attendance
         (Market Time- 9:30 am) and if you punch above 9:45 am then automatically your attendance will be counted half
         and upload selfie daily. In this case your DA will be Rs . At the end of the month, we will send you your salary slip.
         Clause: Target given by your current boss. You have to achieve 70% of your target of the month. And if you achieve
@@ -155,7 +155,7 @@ const PdfGenerator = () => {
             <th colSpan={2}>Refer to Annexure 1</th>
           </tr>
 
-          
+
 
           <tr>
             <td>Medical reimbursement</td>
@@ -193,10 +193,10 @@ const PdfGenerator = () => {
           <tr>
             <td>ESI</td>
             <td>{employeeDetails.salary * 0.0075}</td>
-            <td>{employeeDetails.salary * 0.048 * 12}</td>
+            <td>{employeeDetails.salary * 0.0075 * 12}</td>
           </tr>
 
-         
+
 
           <tr>
             <td>NPS</td>
@@ -207,21 +207,11 @@ const PdfGenerator = () => {
           <tr>
             <th>TOTAL FIXED PAY (A)</th>
             <td>{Number(employeeDetails.salary) + Number(employeeDetails.travelAllowance)}</td>
-            <td>{(Number(employeeDetails.salary) + Number(employeeDetails.travelAllowance)) * 12 }</td>
+            <td>{(Number(employeeDetails.salary) + Number(employeeDetails.travelAllowance)) * 12}</td>
           </tr>
 
           <br />
-
-          <br />
-
-          <br />
-
-          <br />
-
-          <br />
-
-          <br />
-
+          <div style={{ height: "5rem" }}></div>
 
         </table>
 
@@ -238,7 +228,7 @@ const PdfGenerator = () => {
           <div style={{ fontWeight: "bold" }} >Claims cannot be done for dates exceeding 60 days from date of travel.</div>
           <br />
 
-          SalaryRevision: <br />
+          Salary Revision: <br />
           Your salary will be reviewed on annual basis. Revision in salary will be affected every year as per policy of the company.
           Salary revisions are discretionary and will be subject to, and on basis of effective (Individual and company) performance and
           results. <br />
@@ -278,30 +268,30 @@ const PdfGenerator = () => {
           <div style={{ paddingLeft: "5%" }}>
             <div style={{ fontSize: "20px" }}>Termination of Employment:</div>
             <div>
-              Your services maybe terminated on either side bygiving 1 months’ notice. <br />
-              In the event the termination with notice is at the instance of the employee, the company at its sole discretion reserves
+              - Your services maybe terminated on either side bygiving 1 months’ notice. <br />
+              - In the event the termination with notice is at the instance of the employee, the company at its sole discretion reserves
               the right to relieve the employee on any date during the notice period by waving the notice period in full or part
               without paying any amount towards the balance notice period. <br />
-              At the sole discretion of the company your services are liable to be terminated without any notice or salary in lieu thereof
+              - At the sole discretion of the company your services are liable to be terminated without any notice or salary in lieu thereof
               in the event of breach of the terms and conditions of thisletter and the annexure thereto, including refusal of transfer
               or you being involved in violation of any of the company’s rules, policies, services regulations, code of conduct, or
               any offence which may or may not be directly connected with the business of the company and for suchact the
               company shall not be held liable under any circumstances and provisions. The company shall also be entitledto
               terminate your services with immediate effect in the event any of your actions/inactions bring bad name and/or
               disrepute to the company. <br />
-              Or Anyof the below reasons <br />
-              Your breach of any of these terms or any other agreement signed by you with the Company, or <br />
-              Your breach of the Company code of conduct, policies, rules, regulations and procedures, or <br />
-              The Company’s background check reveals discrepancies in the information or documents provided by you to the
-              Company during the recruitment process, or <br />
-              The Companyfinds your performance unsatisfactoryduring any period of training or in the discharge of duties
+              - Or Anyof the below reasons <br />
+              - Your breach of any of these terms or any other agreement signed by you with the Company, or <br />
+              - Your breach of the Company code of conduct, policies, rules, regulations and procedures, or <br />
+              - The Company’s background check reveals discrepancies in the information or documents provided by you to the
+              - Company during the recruitment process, or <br />
+              - The Companyfinds your performance unsatisfactoryduring any period of training or in the discharge of duties
               assignedto you, or <br />
-              Any act or mission by you that may have the effect of injuring the reputation or business ofthe Company or causing
-              loss to the Company, or <br />
-              Your failure to complywith the instructionsspecified in Schedule 1 hereto, or <br />
-              Your Unauthorized absence from work; or <br />
-              Your insubordination; or <br />
-              Your misconduct <br />
+              - Any act or mission by you that may have the effect of injuring the reputation or business ofthe Company or causing
+              - loss to the Company, or <br />
+              - Your failure to complywith the instructionsspecified in Schedule 1 hereto, or <br />
+              - Your Unauthorized absence from work; or <br />
+              - Your insubordination; or <br />
+              - Your misconduct <br />
             </div>
           </div>
           <br />
@@ -327,6 +317,8 @@ const PdfGenerator = () => {
           </div>
           <br />
 
+
+
           <div>
             Intellectual Property: <br />
             If you conceive any new or advanced mention of improving designed/ process/ formulae/ system, etc. in relation to the
@@ -346,16 +338,6 @@ const PdfGenerator = () => {
           </div>
 
           <br />
-
-          <br />
-
-          <br />
-
-          <br />
-
-          <br />
-
-
           <div>
             Non-Solicitation: <br />
             During the Employment Period and for a period of six months after any termination of employment hereunder for any reason,
@@ -366,6 +348,7 @@ const PdfGenerator = () => {
             business with the Company within twenty-four (24) months of Employee’s last day of employment to cease doing business
             with the Company or in any way interfere with the relationship between anysuch customer, supplier, licensee or other business
             entity and the Company. Background verification: <br />
+            <div style={{ height: "3rem" }}></div>
             Your employment will be subject to background verification of the documents, employment history and the facts you have
             shared. Anydiscrepancies arising out such verification will have to be explained. Companyreserves the right of appropriate
             action, including termination of the employment, in case of material difference between the facts you provide and the
@@ -426,7 +409,7 @@ const PdfGenerator = () => {
           <br />
 
           <div style={{ display: "flex", gap: "50%" }}>
-            
+
             <div>
               <div><img src={headImg} width={150} alt="" /></div>
               (HR HEAD)
@@ -634,7 +617,7 @@ const PdfGenerator = () => {
           </form>
         </div>
 
-        <div ref={componentRef} style={{ padding: "100px", background: "#f5f5f5", margin: "20px" }}>
+        <div ref={componentRef} style={{ padding: "60px", background: "#f5f5f5", margin: "10px" }}>
           <div>
 
             <img width={200} src={myImage} alt="logo" style={{ padding: "20px" }} />
@@ -648,7 +631,7 @@ const PdfGenerator = () => {
             Download as PDF
           </button>
         </div>
-        
+
       </div>
     </>
   );
