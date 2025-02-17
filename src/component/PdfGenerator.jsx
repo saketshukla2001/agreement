@@ -141,7 +141,7 @@ const PdfGenerator = () => {
 
           <tr>
             <td>DA & TA</td>
-            <td>{employeeDetails.travelAllowance}</td>
+            <td>{employeeDetails.travelAllowance * 1}</td>
             <td>{employeeDetails.travelAllowance * 12}</td>
           </tr>
 
@@ -206,8 +206,8 @@ const PdfGenerator = () => {
 
           <tr>
             <th>TOTAL FIXED PAY (A)</th>
-            <td>{Number(employeeDetails.salary) + Number(employeeDetails.travelAllowance)} PAd Wala</td>
-            <td>{Number(employeeDetails.salary) + Number(employeeDetails.travelAllowance) * 12}</td>
+            <td>{Number(employeeDetails.salary) + Number(employeeDetails.travelAllowance)}</td>
+            <td>{(Number(employeeDetails.salary) + Number(employeeDetails.travelAllowance)) * 12 }</td>
           </tr>
 
           <br />

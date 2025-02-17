@@ -208,7 +208,7 @@ const Asm = () => {
                     <tr>
                         <th>TOTAL FIXED PAY (A)</th>
                         <td>{Number(employeeDetails.salary) + Number(employeeDetails.travelAllowance)}</td>
-                        <td>{employeeDetails.salary * 12}</td>
+                        <td>{(Number(employeeDetails.salary) + Number(employeeDetails.travelAllowance)) * 12}</td>
                     </tr>
 
                     <br />
