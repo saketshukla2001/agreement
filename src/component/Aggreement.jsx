@@ -551,17 +551,6 @@ const Aggreement = () => {
                                 </label>
 
                                 <label>
-                                    Basic Pay :
-                                    <input
-                                        type="text"
-                                        name="basicPay"
-                                        value={employeeDetails.basicPay}
-                                        onChange={handleInputChange}
-                                    />
-                                </label>
-
-
-                                <label>
                                     Documents :
                                     <input type="file"
                                         accept="image/*" multiple
