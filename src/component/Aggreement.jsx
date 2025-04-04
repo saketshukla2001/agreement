@@ -7,6 +7,7 @@ import stoImage from "../assets/stokist-Ag.jpg"
 
 const Aggreement = () => {
     const [images, setImages] = useState([]);
+    const [showMessage, setShowMessage] = useState(false);
 
     const [employeeDetails, setEmployeeDetails] = useState({
         name: "",
@@ -25,6 +26,14 @@ const Aggreement = () => {
         targetPercentage: "",
         imageUpload: ""
     });
+
+    const handleClick = (choice) => {
+        if (choice === "yes") {
+            setShowMessage(true);
+        } else {
+            setShowMessage(false);
+        }
+    };
 
 
     const handleInputChange = (e) => {
@@ -84,23 +93,17 @@ const Aggreement = () => {
 
                 <br />
 
-                having its principal place of Business at
-                ………………………………………………………………………………………………………………………………..
-                (Herein after referred to as the “super stockist” which expression shall, unless repugnant to the context or meaning
+                ({employeeDetails.reportingBoss}) having its principal place of Business at
+                ..{employeeDetails.designation}..
+                (Herein after referred to as the “super stockist {employeeDetails.location} ” which expression shall, unless repugnant to the context or meaning
                 thereof its successors-in interest/title, legal representatives and permitted assigns) of the Second Party.
 
-                <br />
-                Compensation: <br />
-                Your CTC per annum will be Rs. {employeeDetails.ctc} ({employeeDetails.ctc_word}) as
-                defined in the salary annexure. You will be covered under the company insurance policies as under – Mediclaim of Rs.3,00,000 family floater (Employee + Spouse + 2 Children) Accidental disability benefit of
-                Rs.5,00,000. <br />
-
-                <br />
+                <div style={{ height: "15px" }}></div>
 
                 <p style={{ fontSize: "25px", fontFamily: "serif", textAlign: "center" }}>TERMS AND CONDITIONS ARE AS FOLLOWS:-</p>
 
                 <br />
-                1. This Agreement is effective from 09/02/2024 for a period of one year and cannot be revoked
+                1. This Agreement is effective from {employeeDetails.dateOfCommencement} for a period of one year and cannot be revoked
                 during the period. This agreement may be renewed after one year as per mutual agreement
                 between the company and the Super stockist. This agreement will came into force from the date
                 when goods are first delivered to Super Stockist.
@@ -108,8 +111,8 @@ const Aggreement = () => {
                 <br />
 
 
-                2. That Company hereby appoints ………………………….. as their Super stockist for the sale of their
-                products in the assigned Districts/City of, ………………. India or areas as assigned by the
+                2. That Company hereby appoints …{employeeDetails.reportingBoss}.. as their Super stockist for the sale of their
+                products in the assigned Districts/City of, ……{employeeDetails.location}…… India or areas as assigned by the
                 company. <br />
                 <br />
 
@@ -219,8 +222,10 @@ const Aggreement = () => {
                 <br />
                 24. If you do not pay on 14th days of ordering goods then you have to interest. <br />
                 <br />
+                25. Company will pay the super stock 2% agast your investment of 1500000/-per month
 
-                <div style={{height: "7rem"}}></div>
+
+                <div style={{ height: "7rem" }}></div>
 
                 <div style={{ display: "flex", gap: "40rem" }}>
                     <div>
@@ -295,7 +300,7 @@ const Aggreement = () => {
 
                 </div>
 
-                <div style={{height: "10rem"}}></div>
+                <div style={{ height: "10rem" }}></div>
 
 
                 <div style={{ display: "flex", gap: "40rem" }}>
@@ -421,9 +426,26 @@ const Aggreement = () => {
                     </ul>
                 </div>
 
+                <div style={{ display: 'flex', flexWrap: 'wrap', marginTop: '10px' }}>
+                    {images.map((image, index) => (
+                        <div key={index} style={{ position: 'relative', margin: '5px' }}> <p>Documents</p>
+                            <img src={image.url} alt={image.name} style={{ maxWidth: '200px', maxHeight: '200px' }} />
+                            <button
+                                onClick={() => removeImage(image.url)}
+                                style={{
+                                    position: 'absolute', top: 0, right: 0, background: 'red', color: 'white',
+                                    border: 'none', cursor: 'pointer'
+                                }}
+                            >
+
+                            </button>
+                        </div>
+                    ))}
+                </div>
+
 
                 <div>
-                    <img src={stoImage} style={{margin: "20px"}} alt="images" />
+                    <img src={stoImage} style={{ margin: "20px" }} alt="images" />
                 </div>
 
 
@@ -486,21 +508,21 @@ const Aggreement = () => {
                             <div>
 
                                 <label>
-                                    Designation:
+                                    Location :
                                     <input
                                         type="text"
-                                        name="designation"
-                                        value={employeeDetails.designation}
+                                        name="location"
+                                        value={employeeDetails.location}
                                         onChange={handleInputChange}
                                     />
                                 </label>
 
                                 <label>
-                                    Location (HQ):
+                                    Firm Name :
                                     <input
                                         type="text"
-                                        name="location"
-                                        value={employeeDetails.location}
+                                        name="reportingBoss"
+                                        value={employeeDetails.reportingBoss}
                                         onChange={handleInputChange}
                                     />
                                 </label>
@@ -514,114 +536,38 @@ const Aggreement = () => {
                                         onChange={handleInputChange}
                                     />
                                 </label>
+                            </div>
+
+                            <div>
 
                                 <label>
-                                    Reporting Boss:
+                                    Address :
                                     <input
                                         type="text"
-                                        name="reportingBoss"
-                                        value={employeeDetails.reportingBoss}
+                                        name="designation"
+                                        value={employeeDetails.designation}
                                         onChange={handleInputChange}
                                     />
                                 </label>
 
                                 <label>
-                                    CTC (Annual):
+                                    Basic Pay :
                                     <input
-                                        type="number"
-                                        name="ctc"
-                                        value={employeeDetails.ctc}
-                                        onChange={handleInputChange}
-                                    />
-                                </label>
-
-                                <label>
-                                    CTC in Word(Annual):
-                                    <input type="text" name="ctc_word"
-                                        value={employeeDetails.ctc_word}
-                                        onChange={handleInputChange}
-                                    />
-                                </label>
-
-                                <label>
-                                    Basic Pay:
-                                    <input
-                                        type="number"
+                                        type="text"
                                         name="basicPay"
                                         value={employeeDetails.basicPay}
                                         onChange={handleInputChange}
                                     />
                                 </label>
 
-                            </div>
-                            <div>
 
                                 <label>
-                                    HRA:
-                                    <input
-                                        type="number"
-                                        name="hra"
-                                        value={employeeDetails.hra}
-                                        onChange={handleInputChange}
-                                    />
-                                </label>
-
-                                <label>
-                                    Travel Allowance:
-                                    <input
-                                        type="number"
-                                        name="travelAllowance"
-                                        value={employeeDetails.travelAllowance}
-                                        onChange={handleInputChange}
-                                    />
-                                </label>
-
-                                <label>
-                                    Annual Leave (Days):
-                                    <input
-                                        type="number"
-                                        name="annualLeave"
-                                        value={employeeDetails.annualLeave}
-                                        onChange={handleInputChange}
-                                    />
-                                </label>
-
-                                <label>
-                                    Sick Leave (Days):
-                                    <input
-                                        type="number"
-                                        name="sickLeave"
-                                        value={employeeDetails.sickLeave}
-                                        onChange={handleInputChange}
-                                    />
-                                </label>
-
-                                <label>
-                                    Monthly Salary:
-                                    <input
-                                        type="number"
-                                        name="salary"
-                                        value={employeeDetails.salary}
-                                        onChange={handleInputChange}
-                                    />
-                                </label>
-
-                                <label>
-                                    Target Percentage for Incentives:
-                                    <input
-                                        type="number"
-                                        name="targetPercentage"
-                                        value={employeeDetails.targetPercentage}
-                                        onChange={handleInputChange}
-                                    />
-                                </label>
-
-                                <label>
-                                    Aadhar Card :
+                                    Documents :
                                     <input type="file"
                                         accept="image/*" multiple
                                         onChange={handleImageUpload}
                                     />
+                                    e.g  Aadhaar Card, GST, others
                                 </label>
                             </div>
                         </div>

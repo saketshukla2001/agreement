@@ -4,6 +4,8 @@ import html2canvas from "html2canvas";
 import './css/Agreement.css';
 import myImage from "../assets/logo.png"
 import stoImage from "../assets/stokist-Ag.jpg"
+import sign from "../assets/sign.png"
+import sign2 from "../assets/sign-2.png"
 
 const Distributor = () => {
 
@@ -15,16 +17,8 @@ const Distributor = () => {
     designation: "",
     location: "",
     dateOfCommencement: "",
-    reportingBoss: "",
-    ctc: "",
-    ctc_word: "",
-    basicPay: "",
-    hra: "",
-    travelAllowance: "",
-    annualLeave: "",
-    sickLeave: "",
-    salary: "",
-    targetPercentage: "",
+    address: "",
+    firmName: "",
     imageUpload: ""
   });
 
@@ -51,7 +45,7 @@ const Distributor = () => {
     return (
       <>
         HSBE LIMITED <br />
-        Corporate Office – Andheri Road Level 4 A Wing,  <br />
+        Andheri-Kurla Road Level 4, A Wing,  <br />
         Dynasty Business Park, Mumbai <br />
         Maharashtra – 40005 <br />
         <p style={{ textAlign: "right" }} >EmailId: care@shpropay.com</p> <br />
@@ -61,12 +55,6 @@ const Distributor = () => {
 
         <div style={{ textAlign: "right" }}>
           Date - {employeeDetails.dateOfCommencement}
-        </div>
-
-
-        <div>
-          Dear. {employeeDetails.name} <br />
-          <br />
         </div>
 
 
@@ -86,33 +74,24 @@ const Distributor = () => {
 
         <br />
 
-        having its principal place of Business at
-        ………………………………………………………………………………………………………………………………..
-        (Herein after referred to as the “distributor” which expression shall, unless repugnant to the context or meaning
-        thereof its successors-in interest/title, legal representatives and permitted assigns) of the Second Party.
+        ({employeeDetails.firmName}) having its principal place of Business at
+        ……{ }……
+        (Herein after referred to as the “distributor {employeeDetails.location} ” which expression shall, unless repugnant to the context or meaning
+        thereof its successors-in interest/title, legal representatives and permitted assigns) of the Third Party.
 
-        <br />
-        Compensation: <br />
-        Your CTC per annum will be Rs. {employeeDetails.ctc} ({employeeDetails.ctc_word}) as
-        defined in the salary annexure. You will be covered under the company insurance policies as under – Mediclaim of Rs.3,00,000 family floater (Employee + Spouse + 2 Children) Accidental disability benefit of
-        Rs.5,00,000. <br />
-
-        <br />
-
-        <br />
-
-        <br />
+        <div style={{ height: "200px" }}></div>
 
         <div style={{ display: "flex", gap: "40rem" }}>
           <div>
             <div>HSBE LTD</div>
 
             <div>Authorized Signatory (Company)</div>
+            <div><img src={sign2} alt="images" /></div>
           </div>
 
           <div>
             <div>....................</div>
-            <div>Authorized Signatory (SUPERSTOCKIST)</div>
+            <div>Authorized Signatory (DISTRIBUTOR)</div>
           </div>
         </div>
 
@@ -127,7 +106,7 @@ const Distributor = () => {
         <br />
 
 
-        2. That Company hereby appoints ………………………….. as their Super stockist for the sale of their
+        2. That Company hereby appoints ……{employeeDetails.name}…… as their Super stockist for the sale of their
         products in the assigned Districts/City of, ………………. India or areas as assigned by the
         company. <br />
         <br />
@@ -243,18 +222,19 @@ const Distributor = () => {
         <br />
         24. If you do not pay on 14th days of ordering goods then you have to interest. <br />
         <br />
-        <div style={{height: "10rem"}}></div>
+        <div style={{ height: "10rem" }}></div>
 
         <div style={{ display: "flex", gap: "40rem" }}>
           <div>
             <div>HSBE LTD</div>
 
             <div>Authorized Signatory (Company)</div>
+            <div><img src={sign} width={500} alt="image" /></div>
           </div>
 
           <div>
             <div>....................</div>
-            <div>Authorized Signatory (SUPERSTOCKIST)</div>
+            <div>Authorized Signatory (DISTRIBUTOR)</div>
           </div>
         </div>
 
@@ -324,10 +304,10 @@ const Distributor = () => {
           Without Investment Profit Margin for Superstockist<br />
         </div>
 
-       
-       <br />
 
-       <div style={{height: "15rem"}}></div>
+        <br />
+
+        <div style={{ height: "7rem" }}></div>
 
 
         <div style={{ display: "flex", gap: "40rem" }}>
@@ -335,18 +315,36 @@ const Distributor = () => {
             <div>HSBE LTD</div>
 
             <div>Authorized Signatory (Company)</div>
+            <div><img src={sign} width={500} alt="image" /></div>
           </div>
 
           <div>
             <div>....................</div>
-            <div>Authorized Signatory (SUPERSTOCKIST)</div>
+            <div>Authorized Signatory (DISTRIBUTOR)</div>
           </div>
         </div>
 
 
         <br />
 
-        <div style={{height: "25rem"}}></div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', marginTop: '10px' }}>
+          {images.map((image, index) => (
+            <div key={index} style={{ position: 'relative', margin: '5px' }}> <p>Documents</p>
+              <img src={image.url} alt={image.name} style={{ maxWidth: '200px', maxHeight: '200px' }} />
+              <button
+                onClick={() => removeImage(image.url)}
+                style={{
+                  position: 'absolute', top: 0, right: 0, background: 'red', color: 'white',
+                  border: 'none', cursor: 'pointer'
+                }}
+              >
+
+              </button>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ height: "25rem" }}></div>
 
 
         <div>
@@ -419,11 +417,10 @@ const Distributor = () => {
               <div>
 
                 <label>
-                  Designation: 
-                  <input
-                    type="text"
-                    name="designation"
-                    value={employeeDetails.designation}
+                  Firm Name :
+                  <input type="text"
+                    name="firmName"
+                    value={employeeDetails.firmName}
                     onChange={handleInputChange}
                   />
                 </label>
@@ -448,103 +445,15 @@ const Distributor = () => {
                   />
                 </label>
 
-                {/* <label>
-                  Reporting Boss:
-                  <input
-                    type="text"
-                    name="reportingBoss"
-                    value={employeeDetails.reportingBoss}
-                    onChange={handleInputChange}
-                  />
-                </label> */}
-
-                {/* <label>
-                  CTC (Annual):
-                  <input
-                    type="number"
-                    name="ctc"
-                    value={employeeDetails.ctc}
-                    onChange={handleInputChange}
-                  />
-                </label> */}
-
-                {/* <label>
-                  CTC in Word(Annual):
-                  <input type="text" name="ctc_word"
-                    value={employeeDetails.ctc_word}
-                    onChange={handleInputChange}
-                  />
-                </label> */}
-
-                {/* <label>
-                  Basic Pay:
-                  <input
-                    type="number"
-                    name="basicPay"
-                    value={employeeDetails.basicPay}
-                    onChange={handleInputChange}
-                  />
-                </label> */}
-
               </div>
+
               <div>
 
                 <label>
-                  HRA:
-                  <input
-                    type="number"
-                    name="hra"
-                    value={employeeDetails.hra}
-                    onChange={handleInputChange}
-                  />
-                </label>
-
-                <label>
-                  Travel Allowance:
-                  <input
-                    type="number"
-                    name="travelAllowance"
-                    value={employeeDetails.travelAllowance}
-                    onChange={handleInputChange}
-                  />
-                </label>
-
-                <label>
-                  Annual Leave (Days):
-                  <input
-                    type="number"
-                    name="annualLeave"
-                    value={employeeDetails.annualLeave}
-                    onChange={handleInputChange}
-                  />
-                </label>
-
-                <label>
-                  Sick Leave (Days):
-                  <input
-                    type="number"
-                    name="sickLeave"
-                    value={employeeDetails.sickLeave}
-                    onChange={handleInputChange}
-                  />
-                </label>
-
-                {/* <label>
-                  Monthly Salary:
-                  <input
-                    type="number"
-                    name="salary"
-                    value={employeeDetails.salary}
-                    onChange={handleInputChange}
-                  />
-                </label> */}
-
-                <label>
-                  Target Percentage for Incentives:
-                  <input
-                    type="number"
-                    name="targetPercentage"
-                    value={employeeDetails.targetPercentage}
+                  Address :
+                  <input type="text"
+                    name="address"
+                    value={employeeDetails.address}
                     onChange={handleInputChange}
                   />
                 </label>
