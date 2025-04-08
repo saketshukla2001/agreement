@@ -8,6 +8,7 @@ import Distributor from './Distributor'
 import Offer from './Offer'
 import { Telecaller } from './Telecaller'
 import Asm from './Asm'
+import Vendorss from './Vendorss'
 
 const router = createBrowserRouter([
   {
@@ -83,7 +84,11 @@ const router = createBrowserRouter([
   {
     path: "/offer-letter/suppier",
     element: <Telecaller/>
-  }
+  },
+  {
+    path: "agreement/vendor",
+    element: <Vendorss/>
+  },
 
 ])
 

@@ -33,6 +33,12 @@ export const Sub = () => {
               DISTRIBUTOR
             </button>
 
+            <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
+            onClick={()=> navigate("/agreement/vendor")}
+             >
+              VENDOR
+            </button>
+
 
 
           </div>
