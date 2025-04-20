@@ -20,26 +20,37 @@ export const Sub = () => {
           <h1 className="text-4xl font-bold mb-6 drop-shadow-lg" >Here Your All Agreement</h1>
           <p className="text-lg mb-6 max-w-lg" >Exploring here our all company Agreement</p>
 
-          <div className="flex space-x-6 mb-9" >
-            <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
-            onClick={()=> navigate("/super-stockist")}
-            >
-              SUPERSTOCKIST
-            </button>
+          <div>
 
-            <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
-            onClick={()=> navigate("/distribution")}
-             >
-              DISTRIBUTOR
-            </button>
+            <div className="flex space-x-6 mb-9" >
+              <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
+                onClick={() => navigate("/super-stockist")}
+              >
+                SUPERSTOCKIST
+              </button>
 
-            <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
-            onClick={()=> navigate("/agreement/vendor")}
-             >
-              VENDOR
-            </button>
+              <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
+                onClick={() => navigate("/distribution")}
+              >
+                DISTRIBUTOR
+              </button>
 
+              <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
+                onClick={() => navigate("/agreement/vendor")}
+              >
+                VENDOR
+              </button>
 
+            </div>
+
+            <div>
+
+              <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
+                onClick={() => navigate("/agreement/delivery")}
+              >
+                DELIVERY
+              </button>
+            </div>
 
           </div>
 
