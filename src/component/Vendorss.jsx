@@ -54,7 +54,7 @@ const Vendorss = () => {
     const generateOffer = () => {
         return (
             <>
-                <div style={{ display: "flex", gap: "35rem" }}>
+                <div style={{ display: "flex", gap: "10rem" }}>
 
 
                     <div>
@@ -62,6 +62,14 @@ const Vendorss = () => {
                         Andheri-Kurla Road Level 4, A Wing,  <br />
                         Dynasty Business Park, Mumbai <br />
                         Maharashtra – 40005 <br />
+                    </div>
+
+                    <div>
+                        C.I. Number: - U51909UP2020PLC131384 <br />
+                        GST Number: - 09AAFCH3430B1Z2 <br />
+                        Import/Export Number: - AAFCH3430B <br />
+                        PAN Number: - AAFCH3430B <br />
+                        FSSAI Number: - 12724054000221
                     </div>
 
                     <div>
@@ -82,7 +90,7 @@ const Vendorss = () => {
 
 
                 This Agreement (hereinafter called the “Agreement”) is made at Andheri-Kurla Road Level 4, a Wing, Dynasty Business Park,
-                Mumbai Maharashtra-400059 on the date 00/00/2025 by and amongst
+                Mumbai Maharashtra-400059 on the date ({employeeDetails.dateOfCommencement}) by and amongst
 
                 <br />
 
@@ -166,9 +174,13 @@ const Vendorss = () => {
                     </div>
 
                     <div>
-                        5.1 Except for damages resulting from willful &expiry or damage goods misconduct or gross negligence, neither party will be liable to the other for any incidental, indirect, special, consequential damages, or lost <br />
+                        5.1 Except for damages resulting from willful &expiry or damage goods misconduct or gross negligence, neither party will be liable to the other for any
+                        incidental, indirect, special, consequential damages, or lost <br />
                         profits arising out of, or in connection with, this Agreement, whether an action is in contract or tort and regardless of the theory of liability. <br />
                         5.2 Vendor's total liability under this Agreement shall not exceed the total amount paid by the Customer to the Vendor under this Agreement. <br />
+                        5.3 Any damages incurred during the unloading of goods from the vehicle, and the cost of such damages shall be refundable to the consignor. <br />
+                        5.4 In the event of bottle leakages or any damage to liquid products, cold drinks or similar items, the damaged goods shall be returned to the supplier,
+                        and such products shall not be deemed accepted by the buyer.
                     </div>
                 </div>
 
@@ -220,15 +232,17 @@ const Vendorss = () => {
                     </div>
 
                     <div>
-                        9.1 This Agreement and any dispute or claim arising out of, or in connection with, it, its subject matter or formation shall be governed by, and construed in accordance with, the laws of .({employeeDetails.laws}). <br />
-                        9.2 The parties irrevocably agree that the courts of .({employeeDetails.courtJudiciary}). shall have exclusive jurisdiction Court to settle any dispute or claim that arises out of, or in connection with, this Agreement or its subject matter or formation. <br />
+                        9.1 This Agreement and any dispute or claim arising out of, or in connection with, it, its subject matter or formation shall be governed by, and construed
+                        in accordance with, the laws of. ({employeeDetails.laws}). <br />
+                        9.2 The parties irrevocably agree that the courts of. ({employeeDetails.courtJudiciary}). shall have exclusive jurisdiction Court
+                        to settle any dispute or claim that arises out of, or in connection with, this Agreement or its subject matter or formation. <br />
                         <div style={{ height: "2rem" }}></div>
 
                         <strong>IN WITNESS WHEREOF,</strong> the parties hereto have executed this Agreement as of the Effective Date. <br />
 
                         <div style={{ height: "2rem" }}></div>
 
-                        <strong>Nukkad</strong>
+                        <strong> HSBE Limited (Nukkad)</strong>
                     </div>
                 </div>
 
@@ -267,7 +281,7 @@ const Vendorss = () => {
                     </div>
 
                     <div>
-                        Timestamp: [empty signing Stemp]
+                        Timestamp: 
                     </div>
                 </div>
 
