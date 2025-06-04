@@ -41,6 +41,12 @@ export const Sub = () => {
                 VENDOR
               </button>
 
+              <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
+                onClick={() => navigate("/district-distributor")}
+              >
+                DISTRICT DISTRIBUTOR AGREEMENT
+              </button>
+
             </div>
 
             <div>
@@ -50,6 +56,22 @@ export const Sub = () => {
               >
                 DELIVERY
               </button>
+              
+
+              <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200 mx-6"
+                onClick={() => navigate("/wine-superstokist")}
+              >
+                SUPER STOCKIST AGREEMENT
+              </button>
+
+              <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-600 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200 mx-6"
+                onClick={() => navigate("/wine-parcle")}
+              >
+                WINE PARCEL AGREEMENT
+              </button>
+
+              
+
             </div>
 
           </div>

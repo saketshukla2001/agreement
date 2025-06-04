@@ -152,10 +152,10 @@ export const Telecaller = () => {
             <th colSpan={2}>Refer to Annexure 1</th>
           </tr>
 
-          <tr>
+          {/* <tr>
             <td>Leave travel allowance</td>
             <th colSpan={2}>Refer to Annexure 1</th>
-          </tr>
+          </tr> */}
 
           <tr>
             <td>Medical reimbursement</td>
@@ -196,11 +196,11 @@ export const Telecaller = () => {
             <td>{employeeDetails.salary * 0.0075 * 12}</td>
           </tr>
 
-          <tr>
+          {/* <tr>
             <td>NPS</td>
             <td>{employeeDetails.basicPay * 0.12}</td>
             <td>{employeeDetails.basicPay * 0.12 * 12}</td>
-          </tr>
+          </tr> */}
 
           <tr>
             <th>TOTAL FIXED PAY (A)</th>
@@ -643,7 +643,7 @@ export const Telecaller = () => {
               />
             </label>
 
-            <label>
+            {/* <label>
               Travel Allowance:
               <input
                 type="number"
@@ -651,7 +651,7 @@ export const Telecaller = () => {
                 value={employeeDetails.travelAllowance}
                 onChange={handleInputChange}
               />
-            </label>
+            </label> */}
 
             <label>
               Annual Leave (Days):

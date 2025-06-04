@@ -140,21 +140,21 @@ const Asm = () => {
                         <th colSpan={3}>Choice pay</th>
                     </tr>
 
-                    <tr>
+                    {/* <tr>
                         <td>DA & TA</td>
                         <td>{employeeDetails.travelAllowance * 1}</td>
                         <td>{employeeDetails.travelAllowance * 12}</td>
-                    </tr>
+                    </tr> */}
 
                     <tr>
                         <td>Fuel& maintenance</td>
                         <th colSpan={2}>Refer to Annexure 1</th>
                     </tr>
 
-                    <tr>
+                    {/* <tr>
                         <td>Leave travel allowance</td>
                         <th colSpan={2}>Refer to Annexure 1</th>
-                    </tr>
+                    </tr> */}
 
 
 
@@ -198,12 +198,12 @@ const Asm = () => {
                     </tr>
 
 
-
+{/* 
                     <tr>
                         <td>NPS</td>
                         <td>{employeeDetails.basicPay * 0.12}</td>
                         <td>{employeeDetails.basicPay * 0.12 * 12}</td>
-                    </tr>
+                    </tr> */}
 
                     <tr>
                         <th>TOTAL FIXED PAY (A)</th>
@@ -560,7 +560,7 @@ const Asm = () => {
                             />
                         </label>
 
-                        <label>
+                        {/* <label>
                             Travel Allowance:
                             <input
                                 type="number"
@@ -568,7 +568,7 @@ const Asm = () => {
                                 value={employeeDetails.travelAllowance}
                                 onChange={handleInputChange}
                             />
-                        </label>
+                        </label> */}
 
                         <label>
                             Annual Leave (Days):

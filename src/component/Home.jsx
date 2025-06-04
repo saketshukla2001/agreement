@@ -10,6 +10,9 @@ import { Telecaller } from './Telecaller'
 import Asm from './Asm'
 import Vendorss from './Vendorss'
 import Delivery from './Delivery'
+import Superstockwine from './Superstockwine'
+import Wineparcel from './Wineparcel'
+import DistrictDistributor from './DistrictDistributor'
 
 const router = createBrowserRouter([
   {
@@ -94,6 +97,18 @@ const router = createBrowserRouter([
     path: "agreement/delivery",
     element: <Delivery/>
   },
+  {
+    path: "/wine-superstokist",
+    element: <Superstockwine/>
+  },
+  {
+    path: "/wine-parcle",
+    element: <Wineparcel/>
+  },
+  {
+    path: "/district-distributor",
+    element: <DistrictDistributor/> 
+  }
 
 ])
 
