@@ -5,11 +5,9 @@ import './css/style.css';
 import myImage from "../assets/logo.png"
 import headImg from "../assets/Picture1.png"
 
-const Asm = () => {
-
+const Salesofficer = () => {
 
     const [images, setImages] = useState([]);
-
 
     const [employeeDetails, setEmployeeDetails] = useState({
         name: "",
@@ -32,7 +30,6 @@ const Asm = () => {
         imageUpload: ""
     });
 
-
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setEmployeeDetails((prevState) => ({
@@ -51,7 +48,6 @@ const Asm = () => {
         }));
         setImages(prevImages => [...prevImages, ...newImages]);
     };
-
 
     const generateOffer = () => {
         return (
@@ -121,7 +117,7 @@ const Asm = () => {
                 <br />
                 <p style={{ fontWeight: "bold", fontFamily: "initial" }}>And if you want to receive Bonus incentive then you have to achieve your 125% of target.</p>
 
-                
+
                 Salary: Your monthly salary is INR . {employeeDetails.salary} <br />
                 <br />
 
@@ -464,8 +460,6 @@ const Asm = () => {
         pdf.save("download.pdf");
     };
 
-
-
     return (
         <>
             <div>
@@ -551,7 +545,7 @@ const Asm = () => {
                         </label>
 
                         <label>
-                        Net Pay:
+                            Net Pay:
                             <input
                                 type="number"
                                 name="netPay"
@@ -658,9 +652,6 @@ const Asm = () => {
             </div>
         </>
     )
-
-
-
 }
 
-export default Asm
+export default Salesofficer

@@ -13,6 +13,7 @@ import Delivery from './Delivery'
 import Superstockwine from './Superstockwine'
 import Wineparcel from './Wineparcel'
 import DistrictDistributor from './DistrictDistributor'
+import Salesofficer from './Salesofficer'
 
 const router = createBrowserRouter([
   {
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
 
   {
     path: "/offer-letter/sales-officer",
-    element: <PdfGenerator/>
+    element: <Salesofficer/>
   },
 
 
